@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" href="{% static 'img/site-pic.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>WeathrIQ</title>
+</head>
+<body>
+    <main class="{{ description|lower }}">
+        <section class="side-container">
+            <form method="POST" class="search-form">
+                {% csrf_token %}
+                <div class="search-container">
+                    <i class="bi bi-cloud-sun search-icon"></i>
+                    <input type="text" name="city" placeholder="Enter city name" class="geo-input" value="{{ location|default:'' }}" required />
+                    <button type="submit" class="search-button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            {% if error %}
+                <div class="error-message">
+                    <p>{{ error }}</p>
+                </div>
+            {% elif city %}
+                <div class="day-stats">
+                    <h2 class="day-stats__temperature">{{ current_temp }}</h2>
+                    <h3 class="day-stats__feelslike">
+                        Feels like: <span class="day-stats__feelslike_value">{{ feels_like }}</span>
+                    </h3>
+                    <ul class="day-stats__conditions">
+                        <li>
+                            <p class="day-stats__condition_value">{{ humidity }}</p>
+                            <p class="day-stats__condition_text">Humidity</p>
+                        </li>
+                        <li>
+                            <p class="day-stats__condition_value">{{ clouds }}</p>
+                            <p class="day-stats__condition_text">Cloudiness</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rain-prediction">
+                    <p>Rain Tomorrow Prediction:</p>
+                    <p class="rain-prediction__answer">{{ rain_tomorrow }}</p>
+                </div>
+            {% else %}
+                 <div class="welcome-message">
+                    <p>Enter a city to get the latest weather forecast.</p>
+                </div>
+            {% endif %}
+            <img src="{% static 'img/side-blur.png' %}" class="side-blur" alt="blur"/>
+        </section>
+
+        <section class="main-container">
+            {% if city %}
+            <h4 class="secondary-title">Weather Forecast</h4>
+            <div class="location-header">
+                <h1 class="weather__primary-title">{{ description }}</h1>
+                <div class="weather__location">
+                    <i class="bi bi-geo-alt"></i>
+                    <p class="weather__location_text">
+                        {{ city }}, {{ country }}
+                    </p>
+                </div>
+            </div>
+            <p class="weather__location_date">{{ date }} &nbsp; | &nbsp; {{ time }}</p>
+
+            <p class="weather__primary-stats">
+                Wind: <strong>{{ wind }}</strong> km/h | Pressure: <strong>{{ pressure }}</strong> mb | Visibility: <strong>{{ visibility }}</strong> km
+            </p>
+            
+            <ul class="forecast">
+                {% for time, temp, humidity in forecast_data %}
+                <li class="forecast-item">
+                    <p class="forecast-time">{{ time }}</p>
+                    <p class="forecast-temperature">{{ temp|floatformat:1 }}°</p>
+                    <p class="forecast-humidity"><i class="bi bi-droplet-fill"></i> {{ humidity|floatformat:1 }}%</p>
+                </li>
+                {% endfor %}
+            </ul>
+            
+            <div class="chart-container">
+                <canvas id="forecastChart"></canvas>
+            </div>
+
+            {% endif %}
+        </section>
+    </main>
+
+    {% if forecast_data %}
+    <script>
+        const forecastData = {
+            labels: [{% for time, temp, hum in forecast_data %}"{{ time }}",{% endfor %}],
+            temps: [{% for time, temp, hum in forecast_data %}{{ temp|floatformat:1 }},{% endfor %}],
+            hums: [{% for time, temp, hum in forecast_data %}{{ hum|floatformat:1 }},{% endfor %}]
+        };
+    </script>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/chartSetup.js' %}"></script>
+</body>
+</html>
