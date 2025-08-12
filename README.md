@@ -1,119 +1,87 @@
-WeathrIQ 🌦️
-An intelligent real-time weather forecasting application powered by Django and Machine Learning.
+<!-- HERO BANNER -->
 <p align="center">
-<a href="https://weathriq.onrender.com" target="_blank">
-<img src="https://img.shields.io/badge/Live%20Demo-Visit%20WeathrIQ-brightgreen?style=for-the-badge&logo=render" alt="Live Demo">
-</a>
+  <img src="https://i.imgur.com/your-banner-image.png" alt="WeathrIQ Banner" width="100%">
 </p>
 
+<h1 align="center">WeathrIQ 🌦️</h1>
+<h3 align="center">Your Intelligent Real-Time Weather Companion — Powered by Django & Machine Learning</h3>
+
 <p align="center">
-<a href="https://weathriq.onrender.com" target="_blank">
-<!-- IMPORTANT: Replace this with a real screenshot or GIF of your application -->
-<img src="https://i.imgur.com/your-screenshot-id.png" alt="WeathrIQ Application Screenshot" width="80%">
-</a>
+  <a href="https://weathriq.onrender.com">
+    <img src="https://img.shields.io/badge/🌍 Live%20Demo-Visit%20WeathrIQ-brightgreen?style=for-the-badge&logo=render" alt="Live Demo">
+  </a>
+  <a href="https://github.com/your-username/WeathrIQ/stargazers">
+    <img src="https://img.shields.io/github/stars/your-username/WeathrIQ?style=for-the-badge&color=yellow" alt="Stars">
+  </a>
+  <a href="https://github.com/your-username/WeathrIQ/issues">
+    <img src="https://img.shields.io/github/issues/your-username/WeathrIQ?style=for-the-badge&color=red" alt="Issues">
+  </a>
+  <a href="https://github.com/your-username/WeathrIQ/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
+  </a>
 </p>
 
-🚀 About The Project
-WeathrIQ is more than just a weather app. It's a full-stack web application demonstrating the integration of a robust Django backend with a dynamic, visually appealing frontend. The project leverages machine learning models to provide not just current weather data, but also insightful predictions for future conditions.
+---
 
-From live weather data fetched from the OpenWeatherMap API to AI-powered rain predictions, WeathrIQ is designed to be both functional and beautiful.
+## 🎥 Demo
+<p align="center">
+  <a href="https://weathriq.onrender.com">
+    <img src="https://i.imgur.com/your-demo-gif.gif" alt="WeathrIQ Demo" width="80%">
+  </a>
+</p>
 
-🌟 Core Features
-Live Weather Data: Fetches up-to-the-minute weather conditions for any city in the world.
+---
 
-5-Hour Future Forecast: Uses AI to predict temperature and humidity for the next five hours.
+## 🚀 About the Project  
+**WeathrIQ** is more than just a weather app — it’s a full-stack, AI-enhanced meteorological powerhouse.  
+It seamlessly blends **Django’s robust backend**, **machine learning intelligence**, and **real-time API data**  
+into a **dynamic, responsive, and immersive** user experience.  
 
-AI-Powered Rain Prediction: A trained RandomForestClassifier predicts the likelihood of rain for the following day.
+### Highlights:
+- 🔄 **Live Weather Data** — Global coverage in seconds  
+- 📈 **AI Predictions** — 5-hour forecasts + tomorrow’s rain probability  
+- 🎨 **Dynamic UI** — Weather-based themes for an engaging experience  
+- 📊 **Interactive Charts** — Visualize hourly forecasts with Chart.js  
+- 📱 **Mobile-First Design** — Perfect on any screen  
 
-Dynamic & Immersive UI: The interface background and elements change based on the current weather, providing a unique experience for each location.
+---
 
-Interactive Data Visualization: Hourly forecast data is beautifully rendered using Chart.js.
+## 🖼️ Screenshots
+<p align="center">
+  <img src="https://i.imgur.com/your-screenshot1.png" alt="Screenshot 1" width="45%">
+  &nbsp;&nbsp;
+  <img src="https://i.imgur.com/your-screenshot2.png" alt="Screenshot 2" width="45%">
+</p>
 
-Responsive Design: Looks and works great on all devices, from mobile phones to desktops.
+---
 
-🛠️ Technology Stack
-The project is built with a modern and powerful stack:
+## 🛠️ Tech Stack
 
-Backend
+**Backend**
+<p>
+  <img src="https://skillicons.dev/icons?i=python,django" height="40">
+</p>
 
-Frontend
+**Frontend**
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,javascript,chartjs" height="40">
+</p>
 
-Deployment & Tooling
+**Machine Learning**
+<p>
+  <img src="https://skillicons.dev/icons?i=sklearn,pandas" height="40">
+</p>
 
+**Deployment**
+<p>
+  <img src="https://skillicons.dev/icons?i=render,git,github" height="40">
+</p>
 
+---
 
+## ⚙️ Installation
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-⚙️ Setup & Installation
-To get a local copy up and running, follow these simple steps.
-
-Prerequisites
-Python 3.9+
-
-pip
-
-Installation
-Clone the repository:
-
+### 1️⃣ Clone the Repo
+```bash
 git clone https://github.com/your-username/WeathrIQ.git
-
-Navigate to the project directory:
-
 cd WeathrIQ
-
-Navigate to the Django project root:
-
-cd main
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Set up environment variables:
-
-Create a .env file inside the main directory.
-
-Add your API key: OPENWEATHER_API_KEY='your_key_here'
-
-Train the ML Models:
-
-This is a one-time step to generate the model files. Make sure weather.csv is present in the main directory.
-
-python train_models.py
-
-Run the Django Server:
-
-python manage.py runserver
-
-Your application will be available at http://127.0.0.1:8000/.
-
-🌐 Live Demo
-Check out the live, deployed version of the application:
-
-https://weathriq.onrender.com
