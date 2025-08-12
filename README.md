@@ -1,54 +1,37 @@
-# WeathrIQ 🌦️
-**Your Intelligent Real-Time Weather Companion — Powered by Django & Machine Learning**
+# ✨ WeathrIQ 🌦️
+**`Your Intelligent Real-Time Weather Companion — Powered by Django & Machine Learning`**
+
+──────────────────────────────────────────────
+
+> ⚡ **WeathrIQ** delivers real-time weather data, AI-powered forecasts, and tomorrow’s rain probability — all in one elegant and responsive web app.
 
 ---
 
-## 🚀 Overview
-WeathrIQ is a **full-stack, AI-enhanced weather forecasting application** built with Django and Machine Learning.  
-It combines **real-time data** from the OpenWeatherMap API with **trained predictive models**  
-to deliver accurate and insightful weather forecasts.
-
----
-
-## 🌟 Features
-- 🌍 **Live Weather Data** — Instant updates for any city in the world
-- 📈 **AI-Powered Forecast** — Predicts temperature & humidity for the next 5 hours
-- ☔ **Rain Probability** — ML model forecasts tomorrow’s rain chances
-- 🎨 **Dynamic UI** — Themes adapt to the current weather conditions
-- 📊 **Interactive Charts** — Visualized hourly forecasts
-- 📱 **Responsive Design** — Optimized for desktop, tablet, and mobile
+## 🚀 Why WeathrIQ?
+✅ **Instant Weather Data** — For any city, anywhere 🌍  
+✅ **AI Forecasts** — 5-hour predictions for temperature & humidity 📈  
+✅ **Rain Probability** — Predicts tomorrow’s rain chances ☔  
+✅ **Dynamic UI** — Changes with the weather 🎨  
+✅ **Interactive Charts** — Forecasts made visual 📊  
+✅ **Mobile Friendly** — Perfect on phones, tablets, and desktops 📱  
 
 ---
 
 ## 🛠 Tech Stack
 
-**Backend**
-- Django
-- Python
-- Django REST Framework
-
-**Frontend**
-- HTML5
-- CSS3
-- JavaScript
-- Chart.js
-
-**Machine Learning**
-- Pandas
-- Scikit-learn (RandomForestClassifier)
-
-**API**
-- OpenWeatherMap
-
-**Deployment**
-- Render
-- Git & GitHub
+| Layer | Technologies |
+|-------|--------------|
+| **Backend** | Django · Python · Django REST Framework |
+| **Frontend** | HTML5 · CSS3 · JavaScript · Chart.js |
+| **ML Models** | Pandas · Scikit-learn (RandomForestClassifier) |
+| **API** | OpenWeatherMap |
+| **Deployment** | Render · Git · GitHub |
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Installation Guide
 
-### 1️⃣ Clone the Repository
+**1️⃣ Clone the Repo**
 ```bash
 git clone https://github.com/Ansh701/WeathrIQ.git
 cd WeathrIQ
