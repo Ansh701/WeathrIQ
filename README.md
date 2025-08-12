@@ -1,4 +1,4 @@
-````markdown
+
 <h1 align="center">🌦️ WeatherIQ — Real-Time Weather Forecasting</h1>
 
 <p align="center">
@@ -108,5 +108,5 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <p align="center">Made with ❤️ by <a href="https://www.linkedin.com/in/ansh0">Ansh</a></p>
-```
+
 
