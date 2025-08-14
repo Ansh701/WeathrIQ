@@ -13,7 +13,7 @@
 
 ## 🚀 Live Demo  
 <p align="center">
-  <a href="https://your-live-site-url.com" target="_blank">
+  <a href="https://weathriq.onrender.com" target="_blank">
     <img src="https://img.shields.io/badge/🌐%20View%20Live%20Website-0A66C2?style=for-the-badge&logoColor=white" alt="Live Website" />
   </a>
 </p>
